@@ -16,9 +16,9 @@ trip1 = Trip.new("London Vacation 1", joey, l1)
 trip2 = Trip.new("London Vacation 2", darc, l3)
 trip3 = Trip.new("Paris Weekend", joey, l2)
 
-joey = Passenger.new("Joey")
-darc = Passenger.new("Darcey")
-jas = Passenger.new("Jasmine")
+joey1 = Passenger.new("Joey")
+darc1 = Passenger.new("Darcey")
+jas1 = Passenger.new("Jasmine")
 
 jay = Driver.new("Jay")
 dave = Driver.new("Dave")
