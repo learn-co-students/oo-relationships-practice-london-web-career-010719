@@ -52,25 +52,25 @@ require_relative '../config/environment.rb'
 #================================#
 
 #==== Seed Data for Gym Lab  ====#
-arnie = Trainer.new("Arnold Schwarzenegger")
-mr_motivator = Trainer.new("Mr. Motivsator")
-the_rock = Trainer.new("Dwayne Johnson")
-
-golds = Location.new("Golds Gym")
-gymbox = Location.new("Gymbox")
-
-tl1 = TrainerLocation.new(arnie, golds)
-tl2 = TrainerLocation.new(arnie, gymbox)
-tl3 = TrainerLocation.new(mr_motivator, golds)
-tl4 = TrainerLocation.new(the_rock, gymbox)
-
-chris = Client.new("chris")
-gisela = Client.new("gisela")
-jeff = Client.new("jeff")
-
-chris.assign_trainer(the_rock)
-gisela.assign_trainer(the_rock)
-jeff.assign_trainer(arnie)
+# arnie = Trainer.new("Arnold Schwarzenegger")
+# mr_motivator = Trainer.new("Mr. Motivsator")
+# the_rock = Trainer.new("Dwayne Johnson")
+#
+# golds = Location.new("Golds Gym")
+# gymbox = Location.new("Gymbox")
+#
+# tl1 = TrainerLocation.new(arnie, golds)
+# tl2 = TrainerLocation.new(arnie, gymbox)
+# tl3 = TrainerLocation.new(mr_motivator, golds)
+# tl4 = TrainerLocation.new(the_rock, gymbox)
+#
+# chris = Client.new("chris")
+# gisela = Client.new("gisela")
+# jeff = Client.new("jeff")
+#
+# chris.assign_trainer(the_rock)
+# gisela.assign_trainer(the_rock)
+# jeff.assign_trainer(arnie)
 #================================#
 
 #==== Seed Data for IMDB Lab ====#
@@ -97,6 +97,19 @@ jeff.assign_trainer(arnie)
 #================================#
 
 #==== Seed Data for Lyft Lab ====#
+chris = Passenger.new("chris")
+gisela = Passenger.new("gisela")
+jeff = Passenger.new("jeff")
+
+d1 = Driver.new("John")
+d2 = Driver.new("Kev")
+d3 = Driver.new("Suzie")
+
+r1 = Ride.new(chris, d1)
+r2 = Ride.new(chris, d2, 93.5)
+r3 = Ride.new(chris, d3, 7.9)
+r4 = Ride.new(gisela, d1, 8.2)
+r5 = Ride.new(jeff, d2, 4.3)
 #================================#
 
 def reload
