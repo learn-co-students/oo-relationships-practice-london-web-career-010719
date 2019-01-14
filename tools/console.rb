@@ -33,4 +33,19 @@ ride6 = Ride.new(21.1, dave, darc)
 ride7 = Ride.new(100.1, julian, joey)
 ride8 = Ride.new(55.5, julian, jas)
 
+trainer1 = Trainer.new("BIG SAM")
+trainer2 = Trainer.new("BIG JOHN")
+
+location1 = Location.new("London")
+location2 = Location.new("Milton Keynes")
+
+client1 = Client.new("Joey")
+client2 = Client.new("Darcey")
+
+trainer1.add_location(location1)
+trainer1.add_location(location2)
+trainer2.add_location(location2)
+client1.assign_trainer(trainer2)
+client2.assign_trainer(trainer2)
+
 Pry.start
