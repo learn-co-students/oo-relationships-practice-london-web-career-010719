@@ -25,4 +25,8 @@ class Location
     self.all.min_by {|location| location.clients.length}
   end
 
+  def assign_trainer(trainer)
+    trainer.locations << self
+  end
+
 end

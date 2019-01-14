@@ -19,8 +19,4 @@ class Trainer
     self.all.max_by {|trainer| trainer.clients.length}
   end
 
-  def add_location(location)
-    self.locations << location
-  end
-
 end

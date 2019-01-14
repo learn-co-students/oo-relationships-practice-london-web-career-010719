@@ -42,9 +42,10 @@ location2 = Location.new("Milton Keynes")
 client1 = Client.new("Joey")
 client2 = Client.new("Darcey")
 
-trainer1.add_location(location1)
-trainer1.add_location(location2)
-trainer2.add_location(location2)
+location1.assign_trainer(trainer1)
+location2.assign_trainer(trainer1)
+location2.assign_trainer(trainer2)
+
 client1.assign_trainer(trainer2)
 client2.assign_trainer(trainer2)
 
