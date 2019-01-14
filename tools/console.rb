@@ -1,6 +1,6 @@
 require_relative '../config/environment.rb'
 
-#=== Test Data for AirBnb Lab ===#
+#=== Seed Data for AirBnb Lab ===#
 # chris = Guest.new("chris")
 # chris2 = Guest.new("chris")
 # gisela = Guest.new("gisela")
@@ -16,7 +16,7 @@ require_relative '../config/environment.rb'
 # c2_trip = Trip.new(chris, london_listing2)
 #================================#
 
-#=== Test Data for Bakery Lab ===#
+#=== Seed Data for Bakery Lab ===#
 # greggs = Bakery.new("Greggs")
 # pret = Bakery.new("Pret")
 # indie = Bakery.new("Jeff's Independant Bakery")
@@ -31,7 +31,7 @@ require_relative '../config/environment.rb'
 
 #================================#
 
-#Test Data for Crowd Funding Lab #
+#Seed Data for Crowd Funding Lab #
 # chris = User.new("chris")
 # gisela = User.new("gisela")
 # jeff = User.new("jeff")
@@ -51,33 +51,52 @@ require_relative '../config/environment.rb'
 
 #================================#
 
-#==== Test Data for Gym Lab  ====#
+#==== Seed Data for Gym Lab  ====#
+arnie = Trainer.new("Arnold Schwarzenegger")
+mr_motivator = Trainer.new("Mr. Motivsator")
+the_rock = Trainer.new("Dwayne Johnson")
+
+golds = Location.new("Golds Gym")
+gymbox = Location.new("Gymbox")
+
+tl1 = TrainerLocation.new(arnie, golds)
+tl2 = TrainerLocation.new(arnie, gymbox)
+tl3 = TrainerLocation.new(mr_motivator, golds)
+tl4 = TrainerLocation.new(the_rock, gymbox)
+
+chris = Client.new("chris")
+gisela = Client.new("gisela")
+jeff = Client.new("jeff")
+
+chris.assign_trainer(the_rock)
+gisela.assign_trainer(the_rock)
+jeff.assign_trainer(arnie)
 #================================#
 
-#==== Test Data for IMDB Lab ====#
-jaws = Movie.new("Jaws (1975)")
-starwars = Movie.new("A New Hope (1977)")
-arrival = Movie.new("Arrival (2016)")
-got_movie = Movie.new("Game of Thrones")
-
-simpsons = Show.new("Simpsons")
-game_of_thrones = Show.new("Game of Thrones")
-sharpe = Show.new("Sharpe")
-
-amy = Actor.new("Amy Adams")
-peter = Actor.new("Peter Dinklidge")
-sean = Actor.new("Sean Bean")
-sharky = Actor.new("Sharky Joe")
-
-shark_old = Character.new("Sharky Old", sharky, movie: jaws )
-shark = Character.new("Sharky", sharky, movie: jaws )
-shark_killer = Character.new("Mr Kill Shark", sean, movie: jaws)
-ned_stark = Character.new("Ned Stark", sean, show: game_of_thrones)
-tyrion = Character.new("Tyrion Lannister", peter, show: game_of_thrones)
-dr_amy = Character.new("Dr Amy", amy, movie: arrival)
+#==== Seed Data for IMDB Lab ====#
+# jaws = Movie.new("Jaws (1975)")
+# starwars = Movie.new("A New Hope (1977)")
+# arrival = Movie.new("Arrival (2016)")
+# got_movie = Movie.new("Game of Thrones")
+#
+# simpsons = Show.new("Simpsons")
+# game_of_thrones = Show.new("Game of Thrones")
+# sharpe = Show.new("Sharpe")
+#
+# amy = Actor.new("Amy Adams")
+# peter = Actor.new("Peter Dinklidge")
+# sean = Actor.new("Sean Bean")
+# sharky = Actor.new("Sharky Joe")
+#
+# shark_old = Character.new("Sharky Old", sharky, movie: jaws )
+# shark = Character.new("Sharky", sharky, movie: jaws )
+# shark_killer = Character.new("Mr Kill Shark", sean, movie: jaws)
+# ned_stark = Character.new("Ned Stark", sean, show: game_of_thrones)
+# tyrion = Character.new("Tyrion Lannister", peter, show: game_of_thrones)
+# dr_amy = Character.new("Dr Amy", amy, movie: arrival)
 #================================#
 
-#==== Test Data for Lyft Lab ====#
+#==== Seed Data for Lyft Lab ====#
 #================================#
 
 def reload
