@@ -31,15 +31,7 @@ class Listing
   end
 
   def self.most_popular
-    listing_histogram = {}
-    Trip.all.each do |trip|
-      if listing_histogram.keys.include?(trip.listing)
-        listing_histogram[trip.listing] += 1
-      else
-        listing_histogram[trip.listing] = 1
-      end
-    end
-    listing_histogram.max_by {|listing, count| count }[0]
+    all.max_by {|listing| listing.trip_count}
   end
 
 
